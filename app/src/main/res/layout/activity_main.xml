@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/camera_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_tip_txt"
+                android:layout_width="@dimen/px768"
+                android:layout_height="@dimen/px65"
+                android:gravity="center"
+                android:text="请将脸放在画面中哦~"
+                android:textColor="@color/White"
+                android:textSize="@dimen/px35" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/px768"
+                android:layout_height="@dimen/px432"
+                android:layout_marginTop="10dp">
+
+                <com.guo.android_extend.widget.CameraSurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp" />
+
+                <com.guo.android_extend.widget.CameraGLSurfaceView
+                    android:id="@+id/glsurfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/student_layout"
+            android:layout_width="@dimen/px500"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px150"
+            android:layout_toRightOf="@+id/camera_layout"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/student_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px65"
+                android:gravity="center_vertical"
+                android:text="姓名:"
+                android:textColor="@color/White"
+                android:textSize="@dimen/px40" />
+
+            <TextView
+                android:id="@+id/sign_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px65"
+                android:layout_below="@+id/student_name"
+                android:layout_marginTop="@dimen/px30"
+                android:gravity="center_vertical"
+                android:text="到班时间:17:58"
+                android:textColor="@color/White"
+                android:textSize="@dimen/px40" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/register_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px65"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px50"
+            android:layout_marginRight="@dimen/px50"
+            android:layout_toRightOf="@+id/camera_layout"
+            android:gravity="center_vertical"
+            android:text="选择对应学生信息"
+            android:textColor="@color/White"
+            android:textSize="@dimen/px30"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/register_layout"
+            android:layout_width="@dimen/px500"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/register_tip"
+            android:background="@drawable/shape_bg"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/px650"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px70"
+                android:layout_below="@+id/listview"
+                android:background="@drawable/shape_btn_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/White"
+                android:textSize="@dimen/px35" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

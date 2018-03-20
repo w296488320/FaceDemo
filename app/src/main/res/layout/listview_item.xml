@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px70"
+        android:background="@color/White"
+        android:paddingLeft="@dimen/px25"
+        android:paddingRight="@dimen/px25">
+
+        <TextView
+            android:id="@+id/studentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="光头强"
+            android:textColor="@color/Blue"
+            android:textSize="@dimen/px32" />
+
+        <TextView
+            android:id="@+id/studentId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="123112"
+            android:textColor="@color/Blue"
+            android:textSize="@dimen/px32" />
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/px45"
+            android:layout_height="@dimen/px45"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/select_no" />
+    </RelativeLayout>
+
+</RelativeLayout>
